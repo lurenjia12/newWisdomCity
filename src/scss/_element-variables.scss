@@ -1,0 +1,169 @@
+// 全局变量混合及修改element-ui样式
+/* 自定义尺寸 */
+// $--form-item-margin: 20px;
+// $--border-radius: 4px;
+// $--checkbox-input-border-radius: $--border-radius;
+// $--base-padding: 20px;
+// $--menu-height: 40px;
+// $--default-btn-width: 120px;
+// $--small-btn-width: 80px;
+// $--default-padding: 10px;
+// $--iconfont-size: 16px;
+
+// /* 改变主题色变量 */
+// $--color-primary: #3c72e7;
+// $--color-danger: #df3232;
+// $--color-hover: #1c202d;
+// $--color-warning: #ec5300;
+
+// $--color-text-primary: #1c202d;
+// $--color-text-placeholder: #aaaaaa;
+// $--color-text-regular: #7b7b7b;
+// $--color-default-background: #f6f6f6;
+
+// $--tag-info-color: $--color-primary;
+// $--tag-info-border: $--color-primary;
+// $--tag-info-fill: $--color-primary;
+
+// $--table-header-color: #333333;
+// $--table-header-background: #f1f9ff;
+// $--table-row-hover-background: $--table-header-background;
+// $--form-label-color: $--color-text-regular;
+// $--form-item-bg-color: #f6f6f6;
+
+// $--font-size-base: 12px;
+// $--font-size-large: 14px;
+// $--checkbox-font-size: $--font-size-base;
+// $--checkbox-input-width: 16px;
+// $--checkbox-input-height: 16px;
+// $--switch-height: 16px;
+// $--switch-button-size: 14px;
+// $--button-font-size: $--font-size-base;
+// $--button-default-color: $--color-primary;
+// $--button-default-border: $--color-primary;
+
+// $--msgbox-padding-primary: $--base-padding;
+
+// $--dialog-font-size: $--font-size-base;
+// $--dialog-line-height: 40px;
+
+// $--border-color: #dfdfdf;
+
+// // $--disabled-border-base: #dfdfdf;
+// // $--disabled-fill-base: #dfdfdf;
+
+// $--input-border-color: $--border-color;
+// $--input-hover-border: $--color-hover;
+// $--input-focus-border: $--color-hover;
+// $--select-input-focus-background: $--color-hover;
+
+// $--menu-item-fill: $--color-default-background;
+// $--menu-item-hover-fill: $--border-color;
+// $--menu-item-color: $--color-text-primary;
+
+// /* 自定义颜色变量 */
+// $--color-white: #ffffff;
+// $--color-title: #1c202d;
+// $--color-base-background: $--color-title;
+
+// $--max-z-index: 999;
+// $--large-z-index: 888;
+// $--middle-z-index: 666;
+// $--small-z-index: 333;
+// /* 自定义样式 */
+// $border: 1px solid $--border-color;
+
+
+// /* 改变主题尺寸变量 */
+// $--checkbox-input-border: $border;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '../element';
+@import "../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+/* 混合 */
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin break-all {
+  word-break: break-all;
+}
+@mixin scroll-x {
+  overflow-x: auto;
+}
+@mixin scroll-y {
+  overflow-y: auto;
+}
+.el-input {
+  width: 131px;
+}
+.el-button{
+  width: 101px;
+  height: 30px;
+  padding: 0 0;
+  border-radius: 5px;
+}
+.el-table{
+  .has-gutter {
+    th {
+      color: white;
+      background-color: blue;
+      text-align: center
+    }
+  }
+
+  td {
+    text-align: center;
+  }
+}
+.el-pagination{
+  margin-top: 15px;
+  text-align: right;
+}
+.el-tabs--left .el-tabs__nav-wrap.is-left::after,
+.el-tabs--left .el-tabs__nav-wrap.is-right::after,
+.el-tabs--right .el-tabs__nav-wrap.is-left::after,
+.el-tabs--right .el-tabs__nav-wrap.is-right::after {
+  height:0;
+}
+
+.el-tabs__nav{
+  margin: 30px 30px 30px 0 !important;
+  border-bottom-right-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+  padding: 20px 0;
+  width: 200px;
+  text-align: center;
+  background: white;
+}
+
+.el-select{
+}
+.el-select>.el-input{
+  width: 200px;
+}
+.el-input__inner{
+  color: #000;
+  height: 33px;
+}
+
+.el-tabs--left .el-tabs__active-bar.is-left {
+  right: 0;
+  left: auto;
+  height: 0px !important;
+}
+
+.el-tabs--left .el-tabs__item.is-left {
+  text-align: center;
+}
+
+// .el-pager li.active {
+//   color: #fff;
+//   cursor: default;
+//   background: #409eff;
+// }
+.el-input__icon{
+  line-height: 33px;
+}

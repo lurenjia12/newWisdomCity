@@ -1,0 +1,17 @@
+@import "base.scss";
+@import "animations.scss";
+@import "element-variables.scss";
+@import "my-style.scss";
+
+
+html,body{
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+}
+
+#app{
+  width: 100%;
+  height: 100%
+}
+

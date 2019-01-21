@@ -1,0 +1,45 @@
+// 自定义样式
+//文字样式
+
+
+// .paginationBox{
+//   text-align: right;
+// }
+
+.inputBox .el-input__inner {
+  line-height: 35px;
+  height: 35px;
+  width: 300px;
+}
+
+.delete{
+  color:red
+}
+
+a {
+  padding: 9px 5px;
+  font-size: 14px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #409eff;
+}
+.content-container {
+  width: 100%;
+  overflow-y: scroll;
+  flex: 1
+}
+
+ .box {
+   display: flex;
+   flex-direction: column;
+   overflow:hidden;
+ }
+
+ .headerNav {
+   display: flex
+ }
+
+ img {
+   height: 60px;
+   width: 230px;
+ }
