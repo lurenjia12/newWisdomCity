@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Echarts-bar</title>
+  <style type="text/css">
+    #echartsBox {
+      width: 600px;
+      height: 500px;
+      background-color: yellow;
+      margin: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='echartsBox'></div>
+</body>
+
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.1.0/echarts.min.js">
+</script>
+<script type="text/javascript">
+  // 基于准备好的dom，初始化echarts实例
+  var myChart = echarts.init(document.getElementById('echartsBox'));
+
+  // 指定图表的配置项和数据
+  var option = {
+    title: {
+      text: 'ECharts-pie示例'
+    },
+    tooltip: {},
+    legend: {
+      data: ['销量分析']
+    },
+    xAxis: {
+      // data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+      show: false
+    },
+    yAxis: {
+      show: false
+    },
+    series: [{
+      name: '销量分析',
+      type: 'pie',
+      data: [{
+        name: '衬衫',
+        value: 20
+      }, {
+        name: '羊毛衫',
+        value: 23
+      }, {
+        name: '雪绒衫',
+        value: 43
+      }, {
+        name: '裤子',
+        value: 49
+      }, {
+        name: '高跟鞋',
+        value: 77
+      }, {
+        name: '袜子',
+        value: 54
+      }],
+      legendHoverLink: false,
+      hoverAnimation: true,
+      hoverOffset: 20,
+      selectedOffset: 10,
+      roseType: 'radius',
+      babel: {
+        show: true,
+        position: 'inside'
+      }
+    }]
+  };
+
+  // 使用刚指定的配置项和数据显示图表。
+  myChart.setOption(option);
+</script>
